@@ -1,0 +1,3 @@
+ghtk.admin.order.print_invoice: "In đơn hàng GHTK"
+ghtk.cancel_order_success: Huỷ đơn hàng thành công
+ghtk.cancel_order_fail: Huỷ đơn hàng không thành công

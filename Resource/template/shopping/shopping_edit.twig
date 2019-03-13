@@ -1,0 +1,15 @@
+<script>
+    $(function(){
+        $(".ec-totalBox__btn").find("button").prop("disabled", true);
+        $(".ec-cartRole").append($(".ec-cartRole__error"));
+    })
+</script>
+<div class="ec-cartRole__error">
+    <div class="ec-alert-warning">
+        <div class="ec-alert-warning__icon"><img src="/html/template/default/assets/icon/exclamation-white.svg">
+        </div>
+        <div class="ec-alert-warning__text">
+            {{ message }}
+        </div>
+    </div>
+</div>

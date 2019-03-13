@@ -1,0 +1,23 @@
+<script>
+    $(function(){
+        $('#weight_field').after($('#basicConfig .card-body'));
+        $('#addComment').after($('#weight'));
+    })
+</script>
+
+<div id="weight" class="ec-role">
+    <div class="row">
+        <div class="col-3">
+            <div class="d-inline-block" data-tooltip="true" data-placement="top"
+                title="{{ 'tooltip.product.weight'|trans }}">
+                <span>{{ 'admin.product.weight'|trans }}</span>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div>
+                {{ form_widget(form.weight) }}
+                {{ form_errors(form.weight) }}
+            </div>
+        </div>
+    </div>
+</div>       

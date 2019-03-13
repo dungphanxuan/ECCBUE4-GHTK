@@ -1,0 +1,12 @@
+{
+  "name": "ec-cube/ghtk",
+  "version": "1.0.1",
+  "description": "Giao Hang Tiet Kiem",
+  "type": "eccube-plugin",
+  "require": {
+    "ec-cube/plugin-installer": "~0.0.7"
+  },
+  "extra": {
+    "code": "ghtk"
+  }
+}

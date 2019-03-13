@@ -1,0 +1,30 @@
+<script>
+$(function() {
+    if ($('.print-ghtk').length == 1) {
+        $('.pdf-print').parent().append($('.print-ghtk'));
+    }
+    if ($('.print-ghtk').length >= 1) {
+        $.each($('.print-ghtk'), function(index, item) {
+            $($('#shippingInfo .card-body .col')[index]).append($(this));
+        });
+    }
+    $('#shipping-add').off('click');
+    $('#shipping-add').on('click', () => {
+        alert("Can't change GHTK order address");
+    });
+    $('#shipping-add').hide();
+})
+</script>
+ 
+{% for shipping in Order.getShippings() %}
+    {% if shipping.tracking_number %}
+        <span class="print-ghtk">
+            <span class="badge badge-primary">{{ shipping.ghtk_status}}</span>
+            <a class="btn btn-ec-regular" id="print-ghtk-{{shipping.tracking_number}}" href="{{ url("ghtk_admin_download_pdf", {'tracking_number': shipping.tracking_number}) }}" target="_blank">{{ 'ghtk.admin.order.print_invoice'|trans }}</a>
+        </span>
+            
+    {% else %}
+        <a class="print-ghtk btn btn-ec-regular" id="print-ghtk" style="display:none"></a>
+    {% endif %}
+{% endfor %}
+ 
