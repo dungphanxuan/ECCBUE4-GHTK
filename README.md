@@ -1,9 +1,8 @@
 # GHTK Plugin
 
 ### 1.0 
-* Estimate fee when checkout
-* Create GHTK order after an order placed
-* Add [Weight] attribute to Product Entity
-* Cancel GHTK order when admin cancel order
-* Print GHTK invoice for picking up
-* Update status by webhook from GHTK
+* Ước tính giá ship tại trang mua hàng
+* Tạo đơn ship GHTK ngay khi Order được tạo
+* Hủy đơn ship GHTK: Hủy từng đơn hoặc hủy tất cả khi order được hủy
+* In đơn ship GHTK
+* Cập nhật trạng thái của đơn ship bằng webhook
